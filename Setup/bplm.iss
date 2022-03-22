@@ -31,10 +31,6 @@ Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
 
-[Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
-Name: "newchinesesimplified"; MessagesFile: "compiler:Languages\new ChineseSimplified.isl"
-
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
