@@ -1,8 +1,11 @@
 ; 由Inno安装脚本向导生成的脚本。
 ; 有关创建INNO安装脚本文件的详细信息，请参阅文档！
 
+
 #define MyAppName "bplm"
 #define MyAppVersion "0.0.1"
+#define MyAppPublisher "uxnt"
+#define MyAppURL "https://github.com/uxnt/"
 #define MyAppExeName "MyProg.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
@@ -16,10 +19,10 @@ AppId={{EF5709FC-F186-422A-8805-183586BAC832}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ; AppVerName={#MyAppName} {#MyAppVersion}
-AppPublisher=uxnt
-AppPublisherURL=https://github.com/uxnt/
-AppSupportURL=https://github.com/uxnt/
-AppUpdatesURL=https://github.com/uxnt/
+AppPublisher={#MyAppPublisher}
+AppPublisherURL={#MyAppURL}
+AppSupportURL={#MyAppURL}
+AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 ChangesEnvironment=yes
 ChangesAssociations=yes
