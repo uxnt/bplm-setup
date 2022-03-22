@@ -38,6 +38,18 @@ ShowLanguageDialog=auto
 
 
 
+
+// bplm 主题
+// WizardImageFile="resources\inno-big-100.bmp,resources\inno-big-125.bmp,resources\inno-big-150.bmp,resources\inno-big-175.bmp,resources\inno-big-200.bmp,resources\inno-big-225.bmp,resources\inno-big-250.bmp"
+// WizardSmallImageFile="resources\inno-small-100.bmp,resources\inno-small-125.bmp,resources\inno-small-150.bmp,resources\inno-small-175.bmp,resources\inno-small-200.bmp,resources\inno-small-225.bmp,resources\inno-small-250.bmp"
+// SetupIconFile=resources\code.ico
+// bplm 主题
+// UninstallDisplayIcon={app}\{#ExeBasename}.exe
+// WizardImageFile=resources\bplmSetup-inno-small.bmp
+
+
+
+
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl,i18n\messages.en.isl"
 Name: "simplifiedChinese"; MessagesFile: "i18n\Default.zh-cn.isl,i18n\messages.zh-cn.isl"
