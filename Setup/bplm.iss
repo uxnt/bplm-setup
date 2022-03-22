@@ -37,7 +37,7 @@ WizardStyle=modern
 
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Languages\English.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "simplifiedChinese"; MessagesFile: "i18n\Default.zh-cn.isl"
 
 
@@ -62,4 +62,3 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
