@@ -1,5 +1,6 @@
 ; 由Inno安装脚本向导生成的脚本。
 ; 有关创建INNO安装脚本文件的详细信息，请参阅文档！
+; Inno Setup Compiler 6.2.0
 
 
 #define MyAppName "bplm"
@@ -46,7 +47,7 @@ Name: "simplifiedChinese"; MessagesFile: "i18n\Default.zh-cn.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Program Files (x86)\Inno Setup 6\Examples\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Program Files (x86)\Inno Setup 6\Examples\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 ; 注意：不要在任何共享系统文件上使用 "Flags: ignoreversion"
 
 [Registry]
