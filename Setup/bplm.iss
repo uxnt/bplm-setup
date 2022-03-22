@@ -3,12 +3,11 @@
 
 #define MyAppName "bplm"
 #define MyAppVersion "0.0.1"
-#define MyAppPublisher "uxnt"
-#define MyAppURL "https://github.com/uxnt/"
 #define MyAppExeName "MyProg.exe"
 #define MyAppAssocName MyAppName + " File"
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
+
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -17,10 +16,10 @@ AppId={{EF5709FC-F186-422A-8805-183586BAC832}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
-AppPublisher={#MyAppPublisher}
-AppPublisherURL={#MyAppURL}
-AppSupportURL={#MyAppURL}
-AppUpdatesURL={#MyAppURL}
+AppPublisher=uxnt
+AppPublisherURL=https://github.com/uxnt/
+AppSupportURL=https://github.com/uxnt/
+AppUpdatesURL=https://github.com/uxnt/
 DefaultDirName={autopf}\{#MyAppName}
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
