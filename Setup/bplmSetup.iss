@@ -34,17 +34,19 @@ OutputBaseFilename=bplmSetup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+ShowLanguageDialog=auto
 
 
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
-Name: "simplifiedChinese"; MessagesFile: "i18n\Default.zh-cn.isl"
-
+Name: "english"; MessagesFile: "compiler:Default.isl,i18n\messages.en.isl"
+Name: "simplifiedChinese"; MessagesFile: "i18n\Default.zh-cn.isl,i18n\messages.zh-cn.isl"
 
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "addtopath"; Description: "{cm:AddToPath}"; GroupDescription: "{cm:Other}"
+
 
 [Files]
 Source: "C:\Program Files (x86)\Inno Setup 6\Examples\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
