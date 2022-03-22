@@ -1,6 +1,6 @@
-; 由Inno安装脚本向导生成的脚本。
-; 有关创建INNO安装脚本文件的详细信息，请参阅文档！
-; Inno Setup Compiler 6.2.0
+// 由Inno安装脚本向导生成的脚本。
+// 有关创建INNO安装脚本文件的详细信息，请参阅文档！
+// Inno Setup Compiler 6.2.0
 
 
 #define MyAppName "bplm"
@@ -14,12 +14,12 @@
 
 
 [Setup]
-; 注意：AppId的值唯一标识此应用程序。不要在其他应用程序的安装程序中使用相同的AppId值。
-;（要生成新的GUID，请单击工具|在IDE中生成GUID。）
+// 注意：AppId的值唯一标识此应用程序。不要在其他应用程序的安装程序中使用相同的AppId值。
+//（要生成新的GUID，请单击工具|在IDE中生成GUID。）
 AppId={{EF5709FC-F186-422A-8805-183586BAC832}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-; AppVerName={#MyAppName} {#MyAppVersion}
+// AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -28,8 +28,8 @@ DefaultDirName={autopf}\{#MyAppName}
 ChangesEnvironment=yes
 ChangesAssociations=yes
 DisableProgramGroupPage=yes
-; 取消注释以下行以非管理安装模式运行（仅限当前用户安装）
-; PrivilegesRequired=lowest
+// 取消注释以下行以非管理安装模式运行（仅限当前用户安装）
+// PrivilegesRequired=lowest
 OutputBaseFilename=bplmSetup
 Compression=lzma
 SolidCompression=yes
@@ -50,7 +50,7 @@ Name: "addtopath"; Description: "{cm:AddToPath}"; GroupDescription: "{cm:Other}"
 
 [Files]
 Source: "C:\Program Files (x86)\Inno Setup 6\Examples\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-; 注意：不要在任何共享系统文件上使用 "Flags: ignoreversion"
+// 注意：不要在任何共享系统文件上使用 "Flags: ignoreversion"
 
 [Registry]
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
