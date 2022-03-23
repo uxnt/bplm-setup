@@ -66,7 +66,7 @@ DefaultDirName={autopf}\{#MyAppName}
 
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl,i18n\messages.en.isl"
+Name: "english"; MessagesFile: "i18n\Default.en.isl,i18n\messages.en.isl"
 Name: "simplifiedChinese"; MessagesFile: "i18n\Default.zh-cn.isl,i18n\messages.zh-cn.isl"
 
 
