@@ -1,6 +1,6 @@
 // Inno Setup Compiler 6.2.0
 
-#define InstallTarget "user"  
+#define InstallTarget "user"   
 #define Arch "arm64"
 #define NameShort "bplm"
 #define IncompatibleArchAppId "64"
@@ -54,7 +54,6 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "addtopath"; Description: "{cm:AddToPath}"; GroupDescription: "{cm:Other}"
 
 [Files]
-// 注意：不要在任何共享系统文件上使用 "Flags: ignoreversion"
 Source: "bplm\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
