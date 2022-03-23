@@ -34,7 +34,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultGroupName={#MyAppName}
 // Setup
 AllowNoIcons=yes
-OutputBaseFilename=bplmSetup
+OutputBaseFilename=bplmSetup-{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 ChangesEnvironment=yes
