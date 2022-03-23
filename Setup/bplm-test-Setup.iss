@@ -7,8 +7,8 @@
 #define IncompatibleTargetAppId "32"
 
 #define MyAppName "bplm"
-#define MyAppVersion "0.0.1"
-#define MyAppPublisher "uxnt"
+#define MyAppVersion "0.0.1-alpha"
+#define MyAppPublisher "UXNT Foundation"
 #define MyAppURL "https://github.com/uxnt/"
 #define MyAppExeName "MyProg.exe"
 #define MyAppAssocName MyAppName + " File"
