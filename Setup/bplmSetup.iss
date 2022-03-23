@@ -4,12 +4,11 @@
 
 // user
 #define InstallTarget ""  
+// x86 x64 arm64 ia64 ia32 
 #define Arch "arm64"
-// ia32 arm64
 #define NameShort "bplm"
-
-#define IncompatibleArchAppId "bplm64\*"
-#define IncompatibleTargetAppId "bplm64\*"
+#define IncompatibleArchAppId "64"
+#define IncompatibleTargetAppId "32"
 
 
 
@@ -40,32 +39,19 @@ Compression=lzma
 SolidCompression=yes
 ChangesEnvironment=yes
 ChangesAssociations=yes
+DisableProgramGroupPage=yes
 AppVersion={#MyAppVersion}
 ShowLanguageDialog=auto
 WizardStyle=modern
 
-// DisableProgramGroupPage=yes
 
 
 #if "user" == InstallTarget
 DefaultDirName={userpf}\{#MyAppName}
-// 取消注释以下行以非管理安装模式运行（仅限当前用户安装）
 PrivilegesRequired=lowest
-
 #else
-//DefaultDirName={pf}\{#MyAppName}
 DefaultDirName={autopf}\{#MyAppName}
 #endif
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -76,11 +62,6 @@ DefaultDirName={autopf}\{#MyAppName}
 // bplm
 // UninstallDisplayIcon={app}\{#ExeBasename}.exe
 // WizardImageFile=resources\bplmSetup-inno-small.bmp
-
-
-
-
-
 
 
 
@@ -103,19 +84,12 @@ Name: "addtopath"; Description: "{cm:AddToPath}"; GroupDescription: "{cm:Other}"
 Source: "bplm\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 
-
-
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
-
-
-
-
 
 
 [Registry]
@@ -131,7 +105,6 @@ Root: {#SoftwareClassesRootKey}; Subkey: "Software\Classes\{#MyAppAssocKey}"; Va
 Root: {#SoftwareClassesRootKey}; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: {#SoftwareClassesRootKey}; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: {#SoftwareClassesRootKey}; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".myp"; ValueData: ""
-
 
 
 
@@ -159,7 +132,7 @@ Root: {#EnvironmentRootKey}; Subkey: "{#EnvironmentKey}"; ValueType: expandsz; V
 
 [Code]
 // 不允许安装冲突的体系结构
-// Don't allow installing conflicting architectures
+// 初始化设置安装器
 function InitializeSetup(): Boolean;
 var
   RegKey: String;
@@ -213,6 +186,7 @@ begin
   end;
 end;
 
+// -------------------------------------------
 
 // 获得一些数组的字符串
 // https://stackoverflow.com/a/23838239/261019
